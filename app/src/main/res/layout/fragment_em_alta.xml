@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.EmAltaFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imageView10"
+            android:layout_width="237dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="99dp"
+            android:layout_marginBottom="32dp"
+            android:src="@drawable/triangular"
+            app:layout_constraintBottom_toTopOf="@+id/edt_altura"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/edt_altura"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:ems="10"
+            android:hint="Digite valor da altura"
+            android:inputType="numberSigned"
+            app:layout_constraintBottom_toTopOf="@+id/edt_base"
+            app:layout_constraintEnd_toEndOf="@+id/imageView10"
+            app:layout_constraintStart_toStartOf="@+id/imageView10"
+            app:layout_constraintTop_toBottomOf="@+id/imageView10" />
+
+        <EditText
+            android:id="@+id/edt_base"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="43dp"
+            android:ems="10"
+            android:hint="Digite o valor da base"
+            android:inputType="numberSigned"
+            app:layout_constraintBottom_toTopOf="@+id/btn_triangulo_calcular"
+            app:layout_constraintEnd_toEndOf="@+id/edt_altura"
+            app:layout_constraintStart_toStartOf="@+id/edt_altura"
+            app:layout_constraintTop_toBottomOf="@+id/edt_altura" />
+
+        <Button
+            android:id="@+id/btn_triangulo_calcular"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="183dp"
+            android:text="Calcular"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/edt_base"
+            app:layout_constraintStart_toStartOf="@+id/edt_base"
+            app:layout_constraintTop_toBottomOf="@+id/edt_base" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>
